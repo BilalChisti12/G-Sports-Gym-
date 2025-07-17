@@ -1,137 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>G-Sports Reservation Information</title>
+  <meta charset="UTF-8">
+  <title>G-Sports Reservation</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-      color: #000;
+      background: #f9f9f9;
+      margin: 20px;
+      display: flex;
+      justify-content: center;
     }
+
     .container {
-      max-width: 800px;
-      margin: 40px auto;
+      width: 650px;
+      background: white;
       padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
     }
-    .header {
+
+    .back {
+      color: #007BFF;
+      text-decoration: none;
+      margin-bottom: 10px;
+      display: inline-block;
+      font-size: 14px;
+    }
+
+    .logo {
       text-align: center;
+      margin-bottom: 20px;
     }
-    .header img {
-      width: 150px;
+
+    .logo img {
+      height: 50px;
     }
-    h2 {
-      margin-top: 10px;
-      color: #2c3e50;
+
+    .title {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
+
+    .subtitle {
+      text-align: center;
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      max-width: 100%;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
+      min-width: 600px;
     }
+
     td {
-      padding: 12px;
-      border: 1px solid #ccc;
+      border: 1px solid #ddd;
+      padding: 10px;
       vertical-align: middle;
     }
+
     td:first-child {
       font-weight: bold;
-      width: 30%;
-      background-color: #f5f5f5;
+      background: #f2f2f2;
+      width: 200px;
     }
+
     .photo {
       display: flex;
       align-items: center;
+      gap: 10px;
     }
+
     .photo img {
-      width: 80px;
-      height: 100px;
-      margin-right: 10px;
-      /* border-radius: 4px; */
+      height: 80px;
+      border-radius: 5px;
     }
-    .status-approved {
+
+    .approved {
       color: green;
       font-weight: bold;
-    }
-    .back-link {
-      margin-bottom: 20px;
-      display: inline-block;
-      color: #007bff;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .back-link:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+
   <div class="container">
-    <a href="#" class="back-link">&larr; Back</a>
-    <div class="header">
-      <img src="E:\Web Development\JavaScript\JavaScript\gitam-new-logo.png" alt="GITAM Logo" />
-      <h2>G-Sports</h2>
-      <p>Reservation information</p>
+    <a href="#" class="back">← Back</a>
+
+    <div class="logo">
+      <img src="gitam-new-logo.png" alt="GITAM Logo">
     </div>
-    <table>
-      <tr>
-        <td>Ref. number</td>
-        <td>20250717645618</td>
-      </tr>
-      <tr>
-        <td>Stadium</td>
-        <td>Fitness &amp; Performance Centre</td>
-      </tr>
-      <tr>
-        <td>Facility</td>
-        <td>Fitness &amp; Performance Centre</td>
-      </tr>
-      <tr>
-        <td>Court</td>
-        <td>room 1</td>
-      </tr>
-      <tr>
-        <td>Requester</td>
-        <td class="photo">
-          <img src="https://doeresults.gitam.edu/photo/img.aspx?id=2023006647" alt="User Photo" />
-          MOHAMMED BILAL SHARIEF (2023006647 - student)
-        </td>
-      </tr>
-      <tr>
-        <td>Request from</td>
-        <td>VSP - GIT - CSE</td>
-      </tr>
-      <tr>
-        <td>Mobile</td>
-        <td>6301219812</td>
-      </tr>
-      <tr>
-        <td>E-mail</td>
-        <td>bmohamme3@gitam.in</td>
-      </tr>
-      <tr>
-        <td>Reserved date</td>
-        <td><span class="status-approved">18-Jul-2025</span></td>
-      </tr>
-      <tr>
-        <td>Reserved slot</td>
-        <td><span class="status-approved">07:00 PM to 08:00 PM</span></td>
-      </tr>
-      <tr>
-        <td>Status</td>
-        <td class="status-approved">Approved</td>
-      </tr>
-      <tr>
-        <td>Remarks</td>
-        <td>Approved</td>
-      </tr>
-    </table>
-  </div>
-</body>
-</html>
+
+    <div class="title">G-Sports</div>
+    <div class="subtitle">Reservation information</div>
+
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <td>Ref. number</td>
+          <td><strong>20250717645618</strong></td>
+        </tr>
+        <tr>
+          <td>Stadium</td>
+          <td>Fitness & Performance Centre</td>
+        </tr>
+        <tr>
+          <td>Facility</td>
+          <td>Fitness & Performance Centre</td>
+        </tr>
+        <tr>
+          <td>Court</td>
+          <td>room 1</td>
+        </tr>
+        <tr>
+          <td>Requester</td>
+          <td class="photo">
+            <img src="https://doeresults.gitam.edu/photo/img.aspx?id=2023006647" alt="Profile Photo">
+            MOHAMMED BILAL SHARIEF (2023006647 - student)
+          </td>
+        </tr>
+        <tr>
+          <td>Request from</td>
