@@ -1,82 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=360, initial-scale=1.0">
-  <title>G-Sports Reservation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G-Sports Reservation Information</title>
   <style>
     body {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #fff;
+      color: #000;
     }
     .container {
-      max-width: 360px;
-      margin: 20px auto;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      padding: 15px;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
       border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    h1, h2 {
+    .header {
       text-align: center;
-      margin: 0;
     }
-    h1 {
-      font-size: 24px;
+    .header img {
+      width: 100px;
     }
     h2 {
-      font-size: 18px;
-      margin-bottom: 10px;
+      margin-top: 10px;
+      color: #2c3e50;
     }
     .table-wrapper {
       overflow-x: auto;
     }
     table {
-      width: 900px;
+      width: 100%;
+      min-width: 700px;
       border-collapse: collapse;
-      margin-top: 10px;
+      margin-top: 20px;
     }
     td {
+      padding: 12px;
       border: 1px solid #ccc;
-      padding: 10px;
-      font-size: 14px;
       vertical-align: middle;
     }
-    img {
-      height: 100px;
+    td:first-child {
+      font-weight: bold;
+      width: 30%;
+      background-color: #f5f5f5;
     }
-    .green {
+    .photo {
+      display: flex;
+      align-items: center;
+    }
+    .photo img {
+      width: 80px;
+      height: 100px;
+      margin-right: 10px;
+      border-radius: 4px;
+    }
+    .status-approved {
       color: green;
+      font-weight: bold;
+    }
+    .back-link {
+      margin-bottom: 20px;
+      display: inline-block;
+      color: #007bff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .back-link:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="logo">
-      <img src="gitam-new-logo.png" alt="GITAM Logo">
+    <a href="#" class="back-link">&larr; Back</a>
+    <div class="header">
+      <img src="gitam-new-logo.png" alt="GITAM Logo" />
+      <h2>G-Sports</h2>
+      <p>Reservation information</p>
     </div>
-    <h1>G-Sports</h1>
-    <h2>Reservation information</h2>
     <div class="table-wrapper">
       <table>
-        <tr><td>50777645618</td></tr>
-        <tr><td>Fitness & Performance Centre</td></tr>
-        <tr><td>Fitness & Performance Centre</td></tr>
         <tr>
-          <td>
-            <img src="https://doeresults.gitam.edu/photo/img.aspx?id=2023006647" alt="User Image">
-            MOHAMMED BILAL SHARIEF(2023006647)
+          <td>Ref. number</td>
+          <td>20250717645618</td>
+        </tr>
+        <tr>
+          <td>Stadium</td>
+          <td>Fitness &amp; Performance Centre</td>
+        </tr>
+        <tr>
+          <td>Facility</td>
+          <td>Fitness &amp; Performance Centre</td>
+        </tr>
+        <tr>
+          <td>Court</td>
+          <td>room 1</td>
+        </tr>
+        <tr>
+          <td>Requester</td>
+          <td class="photo">
+            <img src="https://doeresults.gitam.edu/photo/img.aspx?id=2023006647" alt="User Photo" />
+            MOHAMMED BILAL SHARIEF (2023006647 - student)
           </td>
         </tr>
-        <tr><td>GIT - CSE</td></tr>
-        <tr><td>1279872</td></tr>
-        <tr><td>mohamme3@gitam.in</td></tr>
-        <tr><td class="green">Jul-2025</td></tr>
-        <tr><td class="green">07:00 PM to 08:00 PM</td></tr>
-        <tr><td>Approved</td></tr>
-        <tr><td>Approved</td></tr>
+        <tr>
+          <td>Request from</td>
+          <td>VSP - GIT - CSE</td>
+        </tr>
+        <tr>
+          <td>Mobile</td>
+          <td>6301219812</td>
+        </tr>
+        <tr>
+          <td>E-mail</td>
+          <td>bmohamme3@gitam.in</td>
+        </tr>
+        <tr>
+          <td>Reserved date</td>
+          <td><span class="status-approved">18-Jul-2025</span></td>
+        </tr>
+        <tr>
+          <td>Reserved slot</td>
+          <td><span class="status-approved">07:00 PM to 08:00 PM</span></td>
+        </tr>
+        <tr>
+          <td>Status</td>
+          <td class="status-approved">Approved</td>
+        </tr>
+        <tr>
+          <td>Remarks</td>
+          <td class="status-approved">Approved</td>
+        </tr>
       </table>
     </div>
   </div>
